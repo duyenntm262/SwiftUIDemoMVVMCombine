@@ -14,6 +14,11 @@
 		2D4935EE2BD5FC36003A8784 /* MVVMSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4935ED2BD5FC36003A8784 /* MVVMSwiftUITests.swift */; };
 		2D4935F82BD5FC36003A8784 /* MVVMSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4935F72BD5FC36003A8784 /* MVVMSwiftUIUITests.swift */; };
 		2D4935FA2BD5FC36003A8784 /* MVVMSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4935F92BD5FC36003A8784 /* MVVMSwiftUIUITestsLaunchTests.swift */; };
+		2D49360B2BD5FF2A003A8784 /* PlaceholderResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D49360A2BD5FF2A003A8784 /* PlaceholderResponseModel.swift */; };
+		2D49360D2BD6008A003A8784 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D49360C2BD6008A003A8784 /* ContentViewModel.swift */; };
+		2D49360F2BD602FF003A8784 /* PlaceholderListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D49360E2BD602FF003A8784 /* PlaceholderListRow.swift */; };
+		2D4936112BD60518003A8784 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4936102BD60518003A8784 /* ContentService.swift */; };
+		2D4936132BD6053B003A8784 /* PlaceholderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4936122BD6053B003A8784 /* PlaceholderError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		2D4935F32BD5FC36003A8784 /* MVVMSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D4935F72BD5FC36003A8784 /* MVVMSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMSwiftUIUITests.swift; sourceTree = "<group>"; };
 		2D4935F92BD5FC36003A8784 /* MVVMSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2D49360A2BD5FF2A003A8784 /* PlaceholderResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderResponseModel.swift; sourceTree = "<group>"; };
+		2D49360C2BD6008A003A8784 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		2D49360E2BD602FF003A8784 /* PlaceholderListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderListRow.swift; sourceTree = "<group>"; };
+		2D4936102BD60518003A8784 /* ContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
+		2D4936122BD6053B003A8784 /* PlaceholderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +104,11 @@
 		2D4935DB2BD5FC34003A8784 /* MVVMSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				2D4936092BD5FE45003A8784 /* Service */,
+				2D4936082BD5FE3E003A8784 /* Model */,
+				2D4936072BD5FE31003A8784 /* ViewModel */,
+				2D4936062BD5FE28003A8784 /* View */,
 				2D4935DC2BD5FC34003A8784 /* MVVMSwiftUIApp.swift */,
-				2D4935DE2BD5FC34003A8784 /* ContentView.swift */,
 				2D4935E02BD5FC36003A8784 /* Assets.xcassets */,
 				2D4935E22BD5FC36003A8784 /* Preview Content */,
 			);
@@ -125,6 +138,40 @@
 				2D4935F92BD5FC36003A8784 /* MVVMSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = MVVMSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		2D4936062BD5FE28003A8784 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D4935DE2BD5FC34003A8784 /* ContentView.swift */,
+				2D49360E2BD602FF003A8784 /* PlaceholderListRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D4936072BD5FE31003A8784 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D49360C2BD6008A003A8784 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2D4936082BD5FE3E003A8784 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D49360A2BD5FF2A003A8784 /* PlaceholderResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D4936092BD5FE45003A8784 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2D4936102BD60518003A8784 /* ContentService.swift */,
+				2D4936122BD6053B003A8784 /* PlaceholderError.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D49360D2BD6008A003A8784 /* ContentViewModel.swift in Sources */,
 				2D4935DF2BD5FC34003A8784 /* ContentView.swift in Sources */,
+				2D49360B2BD5FF2A003A8784 /* PlaceholderResponseModel.swift in Sources */,
+				2D4936132BD6053B003A8784 /* PlaceholderError.swift in Sources */,
+				2D49360F2BD602FF003A8784 /* PlaceholderListRow.swift in Sources */,
 				2D4935DD2BD5FC34003A8784 /* MVVMSwiftUIApp.swift in Sources */,
+				2D4936112BD60518003A8784 /* ContentService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
